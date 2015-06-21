@@ -1,0 +1,51 @@
+{
+  "name": "es6-notify-aws-login",
+  "description": "notify aws login from log of cloudtrail based on https://github.com/mohayonao/es6-project-boilerplate",
+  "version": "0.0.1",
+  "author": "Taku Nakajima <takunakajima@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/essa/es6-notify-aws-login/issues"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1.35",
+    "request": "^2.58.0",
+    "moment": "^2.10.3",
+    "sinon": "^1.15.3",
+    "co": "^4.5.4",
+    "ramda": "^0.15.0",
+    "baconjs": "^0.7.65"
+  },
+  "devDependencies": {
+    "babel": "^4.6.6",
+    "browserify": "^9.0.3",
+    "espower-babel": "^1.3.0",
+    "isparta": "^2.2.0",
+    "jshint": "^2.6.3",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "^2.1.0",
+    "power-assert": "^0.10.2",
+    "uglify-js": "^2.4.16"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
+  "homepage": "https://github.com/essa/es6-notify-aws-login/",
+  "keywords": [],
+  "licenses": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohayonao/es6-notify-aws-login.git"
+  },
+  "scripts": {
+    "es5": "node es5/index.js 2015/06/18",
+    "build": "npm run build-to5 && npm run build-browser && npm run build-minify",
+    "build-browser": "browserify lib --outfile build/es6-notify-aws-login.js",
+    "build-minify": "uglifyjs build/es6-notify-aws-login.js -o build/es6-nofify-aws-login.min.js",
+    "build-to5": "babel src --out-dir lib",
+    "lint": "jshint src test es5 --reporter node_modules/jshint-stylish/stylish.js",
+    "test": "mocha",
+  }
+}
