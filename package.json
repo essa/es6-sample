@@ -1,10 +1,10 @@
 {
-  "name": "es6-notify-aws-login",
+  "name": "es6-sample",
   "description": "notify aws login from log of cloudtrail based on https://github.com/mohayonao/es6-project-boilerplate",
   "version": "0.0.1",
   "author": "Taku Nakajima <takunakajima@gmail.com>",
   "bugs": {
-    "url": "https://github.com/essa/es6-notify-aws-login/issues"
+    "url": "https://github.com/essa/es6-sample/issues"
   },
   "dependencies": {
     "aws-sdk": "^2.1.35",
@@ -46,6 +46,6 @@
     "build-minify": "uglifyjs build/es6-notify-aws-login.js -o build/es6-nofify-aws-login.min.js",
     "build-to5": "babel src --out-dir lib",
     "lint": "jshint src test es5 --reporter node_modules/jshint-stylish/stylish.js",
-    "test": "mocha",
+    "test": "mocha"
   }
 }
